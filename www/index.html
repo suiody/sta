@@ -590,7 +590,7 @@
 		</header>-->
 		<div class="pages">
 		
-			<div data-left-drawer="left" class="panel" id="main" data-title="Main" data-selected="true" data-title="الصفحة الرئيسية">
+			<div data-left-drawer="left" class="panel" id="main" data-title="Main" data-selected="true" data-title="الصفحة الرئيسية" style="padding-bottom:0;">
 			<style>
 			.sis_head{
 				background:#F00;
@@ -601,15 +601,57 @@
 			}
 			@media screen and (orientation : portrait){
 				.sis_head{
-					height:50%;
+					height:47%;
 				}
 			}
 			</style>
 				<div class="sis_head">
 					&nbsp;
 				</div>
-				<div>
-					<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+				<style>
+				.sis-f-button{
+					font-size:0;
+					margin:0 -9px;
+					padding:0 0 0 5px;
+					direction:rtl;
+				}
+				.sis-f-button span.item{
+					display:inline-block;
+					width:25%;	
+				}
+				@media screen and (orientation : portrait){
+					.sis-f-button span.item{
+						display:inline-block;
+						width:50%;	
+					}
+				}
+				.sis-f-button span.item a{
+					border:1px solid #e4e8e8;
+					background:#f3f6f6;
+					display:block;
+					font-size:15px;
+					margin:5px 5px 0 0;
+					text-align:center;
+					padding:17px;
+					text-decoration:none;
+					font-family:"hacen_screen";
+					color:#7b7b7b;
+					white-space:nowrap;
+				}
+				</style>
+				<div class="sis-f-button">
+					<span class="item"><a href="#">السيرة الذاتية</a></span>
+					<span class="item"><a href="#">المؤلفات والتقريرات</a></span>
+					<span class="item"><a href="#">الكتب الفتوائية</a></span>
+					<span class="item"><a href="#">الإستفتاءات</a></span>
+					<span class="item"><a href="#">إرسال إستفتاء</a></span>
+					<span class="item"><a href="#">البيانات الصادرة</a></span>
+					<span class="item"><a href="#">المراكز والمؤسسات</a></span>
+					<span class="item"><a href="#">الخدمات الدينية والإجتماعية</a></span>
+					<span class="item"><a href="#">المواقع التابعة</a></span>
+					<span class="item"><a href="#">أرشيف الموقع</a></span>
+					<span class="item"><a href="#">مكاتب المرجعية</a></span>
+					<span class="item"><a href="#">إتصل بنا</a></span>
 				</div>
 			
 			
