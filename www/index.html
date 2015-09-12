@@ -591,7 +591,21 @@
 		<div class="pages">
 		
 			<div data-left-drawer="left" class="panel" id="main" data-title="Main" data-selected="true" data-title="الصفحة الرئيسية">
-				<div style="background:#F00;height:50%;margin:0 -9px;background:url(img/head.jpg) no-repeat top center;background-size: auto 100%;">
+			<style>
+			.sis_head{
+				background:#F00;
+				height:100%;
+				margin:0 -9px;
+				background:url(img/head.jpg) no-repeat top center #1c9fc9;
+				background-size: auto 100%;
+			}
+			@media screen and (orientation : portrait){
+				.sis_head{
+					height:50%;
+				}
+			}
+			</style>
+				<div class="sis_head">
 					&nbsp;
 				</div>
 			
