@@ -3504,10 +3504,11 @@ li .icon:before {
 }
 .hassan .view header {
   background:url("img/head-bg.gif");
+  background-size:auto 100%;
   height:59px;/*hassan*/
   color: inherit;
   border: none;
-  border-bottom: 1px solid #c8c7cc;
+  border-bottom: 1px solid #92d0df;
 }
 .hassan .view header .button {
   color: #157dfb;
