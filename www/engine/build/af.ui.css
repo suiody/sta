@@ -3508,7 +3508,19 @@ li .icon:before {
   height:59px;/*hassan*/
   color: inherit;
   border: none;
-  border-bottom: 1px solid #92d0df;
+  border-bottom: 1px solid #b6e4ee;
+}
+@media screen and (max-width: 480px){
+	.hassan .view header .sis-name{
+		width:240px;
+		margin-top:15px !important;
+	}
+}
+@media screen and (max-width: 350px){
+	.hassan .view header .sis-name{
+		width:210px;
+		margin-top:17px !important;
+	}
 }
 .hassan .view header .button {
   color: #157dfb;
