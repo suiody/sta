@@ -150,7 +150,7 @@
 				// here is where you might want to send it the regID for later use.
 				$.ajax({
 					type: "POST",
-					url: "http://192.168.1.141/set_phone_key.php",
+					url: "http://192.168.1.100/set_phone_key.php",
 					data: {regID : e.regid,user:device.uuid,OS:device.platform},
 					async: false,
 					success : function(text){
@@ -260,7 +260,7 @@
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    Notification Callback Success! Result (ios) = '+result);
 			$.ajax({
 				type: "POST",
-				url: "http://192.168.1.141/set_phone_key.php", 
+				url: "http://192.168.1.100/set_phone_key.php", 
 				data: {regID : result,user:device.uuid,OS:device.platform},
 				async: false,
 				success : function(text){
@@ -644,8 +644,10 @@
 					white-space:nowrap;
 				}
 				</style>
+				
+				
 				<div class="sis-f-button">
-					<span class="item"><a href="#sira" data-transition="slide">السيرة الذاتية</a></span>
+					<span class="item"><a href="#sira">السيرة الذاتية</a></span>
 					<span class="item"><a onClick='$.afui.drawer.show("#right","right")'>المؤلفات والتقريرات</a></span>
 					<span class="item"><a href="#">الكتب الفتوائية</a></span>
 					<span class="item"><a href="#">الإستفتاءات</a></span>
@@ -810,93 +812,7 @@
 			
             </div>
 			
-			<div data-left-drawer="left" class="panel" id="esdarat" data-include="include/sira.html" data-title="السيرة الذاتية" >
 
-            </div>
-			<div data-left-drawer="left" class="panel" id="esdarat-inside-content" data-title="مشاهدة الإصدار" >
-				
-				<div class="colored-win"><div class="c-w-title icon pin" id="esdar-win-title">&nbsp;</div>
-					<div id="esdar-text" class="app-text">
-						
-					</div>
-				</div>
-				
-			</div>
-			
-			<div data-left-drawer="left" class="panel" id="alrasad-marakiz" data-include="include/alrasad_marakiz.html" data-title="الرصد / مراكز الدراسات والبحوث" >
-				
-			</div>
-			<div data-left-drawer="left" class="panel" id="alrasad_marakiz-inside-content" data-title="مشاهدة بيانات المركز" >
-				
-				<div class="colored-win"><div class="c-w-title icon pin" id="alrasad_markaz-win-title">&nbsp;</div>
-					<div id="alrasad_markaz-text" class="app-text">
-						
-					</div>
-				</div>
-				
-			</div>
-			
-			<div data-left-drawer="left" class="panel" id="alrasad-taqarir" data-include="include/alrasad_taqarir.html" data-title="الرصد / تقارير وتحقيقات" >
-				
-			</div>
-			<div data-left-drawer="left" class="panel" id="alrasad_taqarir-inside-content" data-title="مشاهدة بيانات التقرير" >
-				
-				<div class="colored-win"><div class="c-w-title icon pin" id="alrasad_taqarir-win-title">&nbsp;</div>
-					<div id="alrasad_taqarir-text" class="app-text">
-						
-					</div>
-				</div>
-				
-			</div>
-			
-			<!--<div data-left-drawer="left" class="panel" id="ch-aqida" data-title="قناة العقيدة" >
-				<iframe style="background:#000;" height="100%" width="100%;" src="http://iicss.iq/?id=41">&nbsp;</iframe>
-				
-				
-				
-				
-				
-				
-				<script>
-				$(document).ready(function(){
-					$("#test-button").click(function(){
-						//window.alert("nokay");
-
-							$.ajax({
-								type : 'get',
-								url : 'http://192.168.1.141/my_data/iicss_site/second/json.php',
-								async : false,
-								jsonpCallback : 'aaa',
-								contentType : "application/json",
-								dataType : 'jsonp',
-								success : function(json){
-									$("#test-button").append(json[0].name);
-									$.each(json, function(key, val){
-										$("#test-button").append(val.name +" - ");
-									});
-								},
-								error: function(e){
-								   //console.log(e.message);
-								   $("#test-button").append("No");
-								}
-							});
-							 
-							
-					})
-				});
-				</script>
-				
-				<div id="test-button">sfasd</div>
-				
-				
-				
-				
-				
-            </div>-->
-			
-			<div data-left-drawer="left" class="panel" id="about-us" data-include="include/about-us.html" data-title="من نحن" >
-			
-            </div>
 			
 		</div>
 <!--		<footer>
@@ -918,13 +834,6 @@
 			</div>
 			<ul class="list">
 				<li><a href="#main" class="icon home" onClick="$.afui.drawer.hide('#right','right')">الرئيسية</a></li>
-				<li><a href="#esdarat" class="icon settings" onClick="$.afui.drawer.hide('#right','right')">الإصدارات</a></li>
-				<li><a href="#" class="icon camera" onClick="$.afui.drawer.hide('#right','right')">الرصد / تقارير وتحقيقات</a></li>
-				<li><a href="#ch-aqida" class="icon tv" onClick="$.afui.drawer.hide('#right','right')">قناة العقيدة</a></li>
-				<li><a href="#" class="icon pin" onClick="$.afui.drawer.hide('#right','right');openUrl('http://iicss.iq/?id=1');return false;">قسم الكلام والعقيدة</a></li>
-				<li><a href="#" class="icon pin" onClick="$.afui.drawer.hide('#right','right');openUrl('http://iicss.iq/?id=2');return false;">قسم الإستشراق</a></li>
-				<li><a href="#" class="icon pin" onClick="$.afui.drawer.hide('#right','right');openUrl('http://iicss.iq/?id=3');return false;">قسم الفكر المعاصر</a></li>
-				<li><a href="#about-us" class="icon question" onClick="$.afui.drawer.hide('#right','right')">من نحن</a></li>
 			</ul>
 			<!--<div class="view active" style="background:none">
                 <div style="background:#09090b;height:59px;text-align:center;opacity:0.7;">
