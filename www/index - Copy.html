@@ -272,17 +272,6 @@
 	////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////
 	}
-	
-	
-	
-	$(window).bind("hashchange",function(){
-        if(window.location.hash == "#main"){
-			$('#sis-app-header').slideUp(150);
-		}else{
-			$('#sis-app-header').slideDown(150);
-		}
-    });
-	
 	</script>
 	<style>
 	/*الإصدارات - esdarat*/
@@ -594,12 +583,6 @@
 
             </div>-->
     <div class="view" id="mainview">
-		<header style="text-align:center;" id="sis-app-header">
-			<a id="menubadge" onclick='$.afui.drawer.show("#right","right")' class='menuButton' style="float:right !important;margin:16px 7px 0 0"></a>
-			<!--<a id="menubadge" onclick='$.afui.drawer.show("#left","left")' class='contactButton' style="float:left !important;margin:13px 0 0 7px"></a>-->
-			<img src="engine/build/img/head-pic.jpg" style="display:block;position:absolute;height:100%;z-index:-1" />
-			<img src="engine/build/img/logo.png" style="display:inline-block;margin:7.5px 0 0 65px;" onload="this.width/=2;this.onload=null;" class="sis-name" />
-		</header>
 		<div class="pages">
 
 			<div data-left-drawer="left" class="panel" id="main" data-title="Main" data-selected="true" data-title="الصفحة الرئيسية" style="padding-bottom:0">
@@ -808,28 +791,6 @@
 				
 				
 			</div>
-			
-			
-			
-			
-			
-			
-			<div class="panel" id="sira" data-include="include/sira.html" data-title="السيرة الذاتية" >
-			
-            </div>
-			
-			<div class="panel" id="makatib" data-include="include/makatib.html" data-title="مكاتب المرجعية" >
-			
-            </div>
-			
-			<div class="panel" id="moalafat_taqarir" data-include="include/moalafat_taqarir.html" data-title="مكاتب المرجعية" >
-			
-            </div>
-			
-			
-			
-			
-			
 
 		</div>
 	</div>
@@ -843,7 +804,17 @@
 		</header>
 		<div class="pages">
 			
+			<div class="panel" id="sira" data-include="include/sira.html" data-title="السيرة الذاتية" >
 			
+            </div>
+			
+			<div class="panel" id="makatib" data-include="include/makatib.html" data-title="مكاتب المرجعية" >
+			
+            </div>
+			
+			<div class="panel" id="moalafat_taqarir" data-include="include/moalafat_taqarir.html" data-title="مكاتب المرجعية" >
+			
+            </div>
 			
 
 			
