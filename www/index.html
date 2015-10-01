@@ -275,6 +275,10 @@
 	
 	
 	
+	
+	
+	
+	
 	$(window).bind("hashchange",function(){
         if(window.location.hash == "#main"){
 			$('#sis-app-header').slideUp(150);
@@ -672,7 +676,7 @@
 					<span class="item"><a href="#">البيانات الصادرة</a></span>
 					<span class="item"><a href="#">المراكز والمؤسسات</a></span>
 					<span class="item"><a href="#">الخدمات</a></span>
-					<span class="item"><a href="#">المواقع التابعة</a></span>
+					<span class="item"><a href="#our_sites">المواقع التابعة</a></span>
 					<span class="item"><a href="#">أرشيف الموقع</a></span>
 					<span class="item"><a href="#makatib">مكاتب المرجعية</a></span>
 					<span class="item"><a href="#contact_us">إتصل بنا</a></span>
@@ -830,6 +834,10 @@
 			
             </div>
 			
+			<div class="panel" id="our_sites" data-include="include/our_sites.html" data-title="المواقع التابعة" >
+				
+            </div>
+			
 			
 			
 			
@@ -870,7 +878,7 @@
 							<li><a href="#" class="icon message" onClick="$.afui.drawer.hide('#right','right');openUrl('http://iicss.iq/?id=1', 'blank');return false;">البيانات الصادرة</a></li>
 							<li><a href="#" class="icon pin" onClick="$.afui.drawer.hide('#right','right');openUrl('http://iicss.iq/?id=2', 'blank');return false;">المراكز والمؤسسات</a></li>
 							<li><a href="#" class="icon pin" onClick="$.afui.drawer.hide('#right','right');openUrl('http://iicss.iq/?id=3', 'blank');return false;">الخدمات</a></li>
-							<li><a href="#about-us" class="icon pin" onClick="$.afui.drawer.hide('#right','right')">المواقع التابعة</a></li>
+							<li><a href="#our_sites" class="icon pin" onClick="$.afui.drawer.hide('#right','right')">المواقع التابعة</a></li>
 							<li><a href="#about-us" class="icon pin" onClick="$.afui.drawer.hide('#right','right')">أرشيف الموقع</a></li>
 							<li><a href="#makatib" class="icon pin" onClick="$.afui.drawer.hide('#right','right')">مكاتب المرجعية</a></li>
 							<li><a href="#contact_us" class="icon phone" onClick="$.afui.drawer.hide('#right','right')">إتصل بنا</a></li>
